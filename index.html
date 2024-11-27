@@ -1,0 +1,94 @@
+<html lang="all">
+
+<head>
+    <title>Bookmarker</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/index.css">
+</head>
+
+<body>
+    <div class="bg-main min-vh-100">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="header pt-5 position-relative">
+                <h2 class="cl_font position-relative">Bookmarker
+                </h2>
+            </div>
+            <div class="Favourite_site w-100 mt-5">
+            </div>
+            <div class="Bookmark_header d-flex align-items-baseline justify-content-center mt-3">
+                <h2 class="fs-2">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite site
+
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+            </div>
+            <div class="Bookmark_Inputs w-100 mt-5 d-flex flex-column justify-content-center align-items-center gap-4 ">
+                <div class="my-3 w-100">
+                    <label for="Bookmarkname">
+                        <span><i class="fa-solid fa-book-bookmark fs-5 fw-bolder"></i></span>
+                        <span class="fs-5 fw-bolder ms-2"> Site Name
+                        </span>
+                    </label>
+                    <input oninput="SiteNameValidation()" type="text" class="form-control mt-4" id="Bookmarkname"
+                        placeholder="Bookmark Name">
+                    <p id="Alert_name" class="alert alert-danger mt-2 d-none">
+                        ❌Invalid website name!
+                        Must be 3 to 63 characters long.
+                        Only letters, numbers, dashes (-), and underscores (_) are allowed.
+                        Cannot start or end with a dash (-) or underscore (_).
+                    </p>
+                </div>
+                <div class="my-3 w-100">
+                    <label for="Bookmarkurl">
+                        <span><i class="fa-solid fa-link fs-5 fw-bolder"></i></span>
+                        <span class="fs-5 fw-bolder ms-2"> Site Url
+                        </span>
+                    </label>
+                    <input oninput="SiteUrlValidation()" type="text" class="form-control mt-4" id="Bookmarkurl" placeholder="Website Url">
+                    <p id="Alert_Url" class="alert alert-danger mt-2 d-none" >
+                        ❌ Invalid URL! Please follow these rules:
+                        The URL must start with 'http://' or 'https://', but this is optional.
+                        It should contain a valid domain name (e.g., example.com).
+                        Domain extensions like '.com', '.org', etc., are required.
+                        Optional: You can add port numbers, paths, queries, or fragments.
+
+                    </p>
+                </div>
+                <button onclick="Add_Data()" class="btn-outline-primary bg-primary text-white p-2 btn px-5"
+                    id="Submit">Submit</button>
+                <div class="Favourite_site w-100 mt-5">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="websites_info">
+                <table class="table table-striped table-hover mt-4 py-5">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">index</th>
+                            <th class="text-capitalize">Website Nmae</th>
+                            <th class="text-capitalize">Visit</th>
+                            <th class="text-capitalize">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabledata">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/index.js"></script>
+</body>
+
+</html>

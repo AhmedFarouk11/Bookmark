@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #F7ECDE;
+    --cl_font: #352E28;
+    --sec_button: #3ca55c;
+}
+
+.bg-main {
+    background-color: var(--bg-main);
+}
+
+.cl_font {
+    color: var(--cl_font);
+}
+
+.sec_button {
+  background-color  : var(--sec_button);
+}
+
+/*------------Header--------------*/
+.header h2 {
+    font-family: "Pacifico";
+    font-size: 50px;
+    isolation: isolate;
+
+}
+
+.header h2::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: #FEC260;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.header h2:hover::after {
+    height: 40%;
+}
+
+.Favourite_site {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352E28;
+}
+
+/*-------------Bookmark------------------*/
+.Bookmark_header h2 {
+    font-size: 25px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    font-family: "Righteous";
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*-------------Bookmark_Inputs------------------*/
+.Btn_sucss
+{
+    background-color  : var(--sec_button)
+}
